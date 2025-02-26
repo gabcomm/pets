@@ -12,12 +12,13 @@ function: `cats()`.
 
 ## Installation
 
-You can install the development version of pets from
-[GitHub](https://github.com/) with:
+You can install the development version of pets like so:
 
 ``` r
-# install.packages("pak")
-pak::pak("gabcomm/pets")
+if(!require("devtools")) {
+  install.packages("devtools")
+}
+devtools::install_github("FISH549/pets")
 ```
 
 ## Example
@@ -36,13 +37,3 @@ cats(TRUE)
 cats(FALSE)
 #> [1] "I am not a cat person."
 ```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.

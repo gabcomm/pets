@@ -22,11 +22,13 @@ The goal of pets is to provide a simple means for people to express their feelin
 
 ## Installation
 
-You can install the development version of pets from [GitHub](https://github.com/) with:
+You can install the development version of pets like so:
 
 ``` r
-# install.packages("pak")
-pak::pak("gabcomm/pets")
+if(!require("devtools")) {
+  install.packages("devtools")
+}
+devtools::install_github("FISH549/pets")
 ```
 
 ## Example
@@ -42,13 +44,3 @@ cats(TRUE)
 ## if you don't like cats
 cats(FALSE)
 ```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
